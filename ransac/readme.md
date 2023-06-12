@@ -24,7 +24,7 @@ The probability of all points will be inliners in one iteration is <b>p = k^M</b
 <br><br>
 The calculation would be:
 <br><br>
-<img src=iteration_required.png>
+<img src=images/iteration_required.png>
 <br><br>
 Note that the model would not work well if the proportion of outliers to be too large, and become not funcationable if it exceed 50%.
 
@@ -45,9 +45,19 @@ Note that the model would not work well if the proportion of outliers to be too 
 <br><br>
 If the error tholerance threshold is too large, some outliers might be tolerance as liners. However, if the threshold is too small the optimal model might not able to be achieved. 
 
+## Example
+<img src=images/tips_ransac.png>
+<img src=images/tips_lr.png>
+
+<br>
+Explanation coming soon...
+
+
 ## Reference
+RANSAC on <a href="https://en.wikipedia.org/wiki/Random_sample_consensus">Wikipedia</a>
+<br>
 The notes of this topic learnt from the following sources:
 <br>
-<b>Aknur Karaby</b> from the YouTube channel<b>ISSAI_NU</b>. YouTube video on<a href="https://youtu.be/SQB9GXxY6KY">Machine Learning Basics: Random Sample Consensus (RANSAC)</a>
-<br><br>
-YouTube channel <b>Educational Research Techniques</b>\'s video <a href="https://youtu.be/6lEPn1WkjVg">RANSAC Regression with Python</a>
+1. <b>Aknur Karaby</b> from the YouTube channel<b>ISSAI_NU</b>. YouTube video on <a href="https://youtu.be/SQB9GXxY6KY">Machine Learning Basics: Random Sample Consensus (RANSAC)</a>
+<br>
+2. YouTube channel <b>Educational Research Techniques</b>\'s video <a href="https://youtu.be/6lEPn1WkjVg">RANSAC Regression with Python</a>
