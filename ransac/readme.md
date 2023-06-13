@@ -45,19 +45,25 @@ Note that the model would not work well if the proportion of outliers to be too 
 <br><br>
 If the error tholerance threshold is too large, some outliers might be tolerance as liners. However, if the threshold is too small the optimal model might not able to be achieved. 
 
-## Example
-<img src=images/tips_ransac.png>
+## Example - Tips Dataset from PyDataset
 <img src=images/tips_lr.png>
-
+<img src=images/tips_ransac.png>
 <br>
-Explanation coming soon...
+Linear Regression R2: 0.4687		vs 		Ransac R2: 0.4298
+Linear Regression MAE: 0.7368	vs 		Ransac MAE: 0.7649
+<br><br>
+When you compare the visualizations between two algorthms, you may able to find the RANSAC model is able to identify the outliers - The outliers are further away from the prediction line. Even the R-square of RANSAC model is lower, but the MAE is higher, which means the fit in RANSAC model is closer to the median. As the R-square formula is more sensitive to outliers penalties, we may use MAE to evaluate the accuracy between two models. We can see the MAE of RANSAC model is greater than Linear Regression model, it means the accuracy of RANSAC model is better while minimizing the influence from the outliers in the dataset.
+<br><br>
+Note: If there are many outliers then you may consider using Mean Absolute Error (MAE). RMSE (R-square) is more sensitive to outliers than the MAE. But when outliers are exponentially rare (like in a bell-shaped curve), the RMSE performs very well and is generally preferred.
+<br>
+Source: <a href="https://stats.stackexchange.com/a/486577">StackExchange post</a>
 
 
 ## Reference
 RANSAC on <a href="https://en.wikipedia.org/wiki/Random_sample_consensus">Wikipedia</a>
-<br>
+<br><br>
 The notes of this topic learnt from the following sources:
 <br>
 1. <b>Aknur Karaby</b> from the YouTube channel<b>ISSAI_NU</b>. YouTube video on <a href="https://youtu.be/SQB9GXxY6KY">Machine Learning Basics: Random Sample Consensus (RANSAC)</a>
-<br>
 2. YouTube channel <b>Educational Research Techniques</b>\'s video <a href="https://youtu.be/6lEPn1WkjVg">RANSAC Regression with Python</a>
+3. StackExchange post <a href="https://stats.stackexchange.com/questions/48267/mean-absolute-error-or-root-mean-squared-error">Mean absolute error OR root mean squared error?</a>

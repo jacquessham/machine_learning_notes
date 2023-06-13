@@ -4,6 +4,7 @@ import numpy as np
 from pydataset import data
 from sklearn.linear_model import RANSACRegressor, LinearRegression
 from sklearn.metrics import r2_score
+from sklearn.metrics import mean_absolute_error as mae
 import plotly
 import plotly.graph_objs as go
 from plotly.offline import *
@@ -29,6 +30,7 @@ model_lr.fit(X, y)
 pred_lr = model_lr.predict(X)
 
 r2_lr = r2_score(y, pred_lr)
+mae_lr = mae(y, pred_lr)
 
 # Train RANSAC
 model_ransac = RANSACRegressor(LinearRegression(), residual_threshold=2, random_state=0)
@@ -36,10 +38,13 @@ model_ransac.fit(X, y)
 pred_ransac = model_ransac.predict(X)
 
 r2_ransac = r2_score(y, pred_ransac)
+mae_ransac = mae(y, pred_ransac)
 
 # Print result
-print('LinearRegression: '+str(r2_lr))
-print('Ransac: '+str(r2_ransac))
+print('LinearRegression R2: '+str(r2_lr))
+print('LinearRegression MAE: '+str(mae_lr))
+print('Ransac R2: '+str(r2_ransac))
+print('Ransac MAE: '+str(mae_ransac))
 
 # Prepare a line
 pt_line = np.arange(0,math.ceil(y.max())+1,1)
