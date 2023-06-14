@@ -5,7 +5,7 @@ This is the repository to save my machine learning notes and scripts. Coming soo
 <ul>
 	<li>Recommendation System</li>
 	<li>Random Sample Consensus (RANSAC)</li>
-	<li></li>
+	<li>Anomaly Detection</li>
 </ul>
 
 ## Recommendation System
@@ -15,3 +15,6 @@ You may find more information about recommendation system in this [folder](recom
 ## RandomSample Consensus (RANSAC)
 An improved algorithm to encounter outliers in linear regression.<br>
 You may find more information about recommendation system in this [folder](ransac).
+
+## Anomaly Detection
+Coming Soon...<br>
