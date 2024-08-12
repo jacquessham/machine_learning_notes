@@ -18,3 +18,6 @@ You may find more information about recommendation system in this [folder](ransa
 
 ## Anomaly Detection
 Coming Soon...<br>
+
+## Neural Network Basic
+Coming soon...<br>
